@@ -1,0 +1,18 @@
+<table summary="Information about following/followers">
+  <tr>
+    <td class="main">
+      <h1><%= @title %></h1>
+
+      <% unless @users.empty? %>
+        <ul class="users">
+          <%= render @users %>
+        </ul>
+        <%= will_paginate @users %>
+      <% end %>
+    </td>
+    <% # Exercise 12.4 %>
+    <%= render 'shared/sidebar' %>
+    <% # Exercise 12.4 %>
+  </tr>
+</table>
+
